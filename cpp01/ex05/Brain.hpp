@@ -4,7 +4,6 @@
 class Brain
 {
     private:
-        Brain *einstein;
         int weight;
         int fats;
         int iq;

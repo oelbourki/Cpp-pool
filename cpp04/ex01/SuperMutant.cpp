@@ -1,15 +1,14 @@
 #include "SuperMutant.hpp"
 
-SuperMutant::SuperMutant(SuperMutant const &a)
+SuperMutant::SuperMutant(const SuperMutant &a)
 {
     std::cout << "Gaaah. Me want smash heads !" << std::endl;
     *this = a;
 }
-SuperMutant &SuperMutant::operator=(SuperMutant const &a)
+SuperMutant &SuperMutant::operator=(const SuperMutant &a)
 {
     std::cout << "Gaaah. Me want smash heads !" << std::endl;
-    *this = a;
-    return *this;
+    return const_cast<SuperMutant&>(a);
 }
 
 SuperMutant::~SuperMutant()

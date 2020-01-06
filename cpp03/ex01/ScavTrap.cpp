@@ -94,5 +94,6 @@ void    ScavTrap::challengeNewcomer(std::string const & target)
     this->energy_points -= 25;
     if (this->energy_points <= 0)
         this->energy_points = 0;
+    std::cout << "attacking " << target << std::endl;
     std::cout << challenges[rand() % 5] << std::endl;
 }

@@ -18,8 +18,8 @@ Sorcerer::Sorcerer(Sorcerer const & wiz)
 }
 Sorcerer & Sorcerer::operator=(const Sorcerer & wiz)
 {
-    this->name = name;
-    this->title = title;
+    this->name = wiz.name;
+    this->title = wiz.title;
     return *this;
 }
 

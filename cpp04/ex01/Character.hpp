@@ -10,10 +10,10 @@ class Character
         int ap;
     public:
         Character(std::string const & name);
-        Character(Character const &a);
+        Character(const Character &a);
         Character();
         ~Character();
-        Character &operator=(Character const &a);
+        Character &operator=(const Character &a);
         void recoverAP();
         void equip(AWeapon*);
         virtual void attack(Enemy*);
@@ -22,4 +22,4 @@ class Character
         AWeapon *getWeapon() const;
 };
 
-std::ostream& operator<< (std::ostream& out, Character const &_Character);
+std::ostream& operator<< (std::ostream& out, const Character &_Character);

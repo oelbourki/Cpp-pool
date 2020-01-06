@@ -19,6 +19,5 @@ RadScorpion::RadScorpion(RadScorpion const &a)
 }
 RadScorpion &RadScorpion::operator=(RadScorpion const &a)
 {
-    *this = a;
-    return *this;
+    return const_cast<RadScorpion&>(a);
 }

@@ -1,7 +1,7 @@
 #include "PlasmaRifle.hpp"
 
 
-PlasmaRifle::PlasmaRifle(PlasmaRifle const &a)
+PlasmaRifle::PlasmaRifle(const PlasmaRifle &a)
 {
     this->name = a.getName();
     this->ap = a.getAPCost();
@@ -21,4 +21,9 @@ PlasmaRifle::~PlasmaRifle()
 void PlasmaRifle::attack() const
 {
     std::cout << "* piouuu piouuu piouuu *" << std::endl;
+}
+
+PlasmaRifle &PlasmaRifle::operator=(const PlasmaRifle &a)
+{
+    return const_cast<PlasmaRifle&>(a);
 }

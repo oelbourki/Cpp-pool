@@ -8,16 +8,15 @@ Character::Character(std::string const & name)
     this->wep = NULL;
     return;
 }
-Character::Character(Character const &a)
+Character::Character(const Character &a)
 {
     *this = a;
     return;
 }
 
-Character &Character::operator=(Character const &a)
+Character &Character::operator=(const Character &a)
 {
-    *this = a;
-    return *this;
+    return const_cast<Character&>(a);
 }
 Character::Character()
 {
@@ -77,7 +76,7 @@ AWeapon *Character::getWeapon() const
 {
     return this->wep;
 }
-std::ostream& operator<< (std::ostream& out, Character const &_Character)
+std::ostream& operator<< (std::ostream& out, const Character &_Character)
 {
     if (_Character.getWeapon())
         out << _Character.getName() + " has " << _Character.getAp() << " AP and wields a " + _Character.getWeapon()->getName() + "\n";

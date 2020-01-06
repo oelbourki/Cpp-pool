@@ -5,6 +5,7 @@ Brain::Brain(int weight,int fats,int iq)
 {
     this->fats = fats;
     this->iq = iq;
+    this->weight = weight;
 }
 Brain::Brain()
 {

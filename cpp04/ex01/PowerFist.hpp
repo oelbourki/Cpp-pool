@@ -5,7 +5,7 @@ class PowerFist : public AWeapon {
 	public:
 		PowerFist();
 		~PowerFist();
-        PowerFist(PowerFist const &a);
-        PowerFist &operator=(PowerFist const &a);
+        PowerFist(const PowerFist &a);
+        PowerFist &operator=(const PowerFist &a);
         void attack() const;
 };

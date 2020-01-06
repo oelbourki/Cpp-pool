@@ -101,6 +101,7 @@ void    NinjaTrap::ninjaShoebox(NinjaTrap const &target)
     this->energy_points -= 25;
     if (this->energy_points <= 0)
         this->energy_points = 0;
+    std::cout << "attacking " << target.name << std::endl;
     std::cout << this->vaulthunterQuotes[rand() % 25] << std::endl;
 }
 
