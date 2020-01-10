@@ -136,28 +136,28 @@ Fixed Fixed::operator--(int a)
     this->store = this->store - 1;
     return b;    
 }
-Fixed &max(Fixed &a,Fixed &b)
+Fixed &Fixed::max(Fixed &a,Fixed &b)
 {
     if (a <= b)
         return b;
     else 
         return a;
 }
-Fixed &min(Fixed &a,Fixed &b)
+Fixed &Fixed::min(Fixed &a,Fixed &b)
 {
     if (a <= b)
         return a;
     else 
         return b;
 }
-Fixed const &min(Fixed const &a,Fixed const &b)
+Fixed &Fixed::min(Fixed const &a,Fixed const &b)
 {
     Fixed c(a);
     Fixed d(b);
     return min(c,d);
 }
 
-Fixed const &max(Fixed const &a,Fixed const &b)
+Fixed &Fixed::max(Fixed const &a,Fixed const &b)
 {
     Fixed c(a);
     Fixed d(b);

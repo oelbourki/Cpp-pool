@@ -3,12 +3,12 @@
 
 
 
-SuperTrap::SuperTrap(std::string name) : ClapTrap(name) , FragTrap(name), NinjaTrap(name)
+SuperTrap::SuperTrap(std::string name) : ClapTrap(name)
 {
     ClapTrap::setDetailes(name , 100, 100, 120, 120 ,1, 30 , 20, 5);
 }
 
-SuperTrap::SuperTrap() : ClapTrap() , FragTrap(), NinjaTrap()
+SuperTrap::SuperTrap() : ClapTrap()
 {
 ClapTrap::setDetailes("" , 100, 100, 120, 120 ,1, 30 , 20, 5);
 }

@@ -5,8 +5,8 @@ class SuperMutant : public Enemy
     public:
         SuperMutant();
         ~SuperMutant();
-        SuperMutant(const SuperMutant &a);
-        SuperMutant &operator=(const SuperMutant &a);
+        SuperMutant(SuperMutant const &a);
+        SuperMutant &operator=(SuperMutant const &a);
         void takeDamage(int a);
 };
 

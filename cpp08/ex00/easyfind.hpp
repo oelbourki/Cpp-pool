@@ -8,27 +8,19 @@
 template <class T>
 int    easyfind(T list,int val)
 {
-    std::list<int>::iterator it = list.begin();
-    std::list<int>::iterator et = list.end();
-    long long int i = 0;
-    try
+    typename T::iterator it = list.begin();
+    typename T::iterator et = list.end();
+    int i = 0;
+
+    while(it != et)
     {
-        while(it != et)
-        {
-            if (*it == val)
-                return (i);
-            i++;
-            it++;
-        }
-    }
-    catch(const std::exception& e)
-    {
-        throw std::excepetion();
+        if (*it == val)
+            return (i);
+        i++;
+        it++;
     }
     if (*it == val)
         return i;
     throw std::exception();
 }
-
-
 

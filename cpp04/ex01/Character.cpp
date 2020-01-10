@@ -8,13 +8,13 @@ Character::Character(std::string const & name)
     this->wep = NULL;
     return;
 }
-Character::Character(const Character &a)
+Character::Character(Character const &a)
 {
     *this = a;
     return;
 }
 
-Character &Character::operator=(const Character &a)
+Character &Character::operator=(Character const &a)
 {
     return const_cast<Character&>(a);
 }
@@ -27,6 +27,7 @@ Character::Character()
 }
 Character::~Character()
 {
+    delete this->wep;
     return;
 }
 void Character::recoverAP()
@@ -37,7 +38,6 @@ void Character::recoverAP()
 }
 void Character::equip(AWeapon* aweapon)
 {
-    delete this->wep;
     this->wep = aweapon;
 }
 void Character::attack(Enemy* enemy)
@@ -49,7 +49,7 @@ void Character::attack(Enemy* enemy)
         if (this->ap != 0 && this->ap >= this->wep->getAPCost())
         {
             std::cout << this->name + " attacks " + enemy->getType() + " with a " + this->wep->getName() << std::endl;
-           this->wep->attack();
+            this->wep->attack();
             enemy->takeDamage(this->wep->getDamage());
             this->ap -= this->wep->getAPCost();
             if (this->ap <= 0)
@@ -76,7 +76,7 @@ AWeapon *Character::getWeapon() const
 {
     return this->wep;
 }
-std::ostream& operator<< (std::ostream& out, const Character &_Character)
+std::ostream& operator<< (std::ostream& out, Character const &_Character)
 {
     if (_Character.getWeapon())
         out << _Character.getName() + " has " << _Character.getAp() << " AP and wields a " + _Character.getWeapon()->getName() + "\n";

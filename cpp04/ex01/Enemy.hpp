@@ -8,7 +8,7 @@ class Enemy
         std::string type;
 
     public:
-        Enemy(int hp, const std::string &type);
+        Enemy(int hp, std::string const & type);
         Enemy();
         virtual ~Enemy();
         Enemy(const Enemy &a);
@@ -18,4 +18,4 @@ class Enemy
         virtual void takeDamage(int);
 };
 
-std::ostream& operator<< (std::ostream& out, const Enemy &_Enemy);
+std::ostream& operator<< (std::ostream& out, Enemy const &_Enemy);

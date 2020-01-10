@@ -65,7 +65,8 @@ void    NinjaTrap::beRepaired(unsigned int amount)
         this->hit_points = this->max_hit_points;
 }
 
-void    NinjaTrap::ninjaShoebox(FragTrap const &target)
+
+void    NinjaTrap::ninjaShoebox(FragTrap &target)
 {
     if (this->energy_points < 25)
     {
@@ -76,9 +77,10 @@ void    NinjaTrap::ninjaShoebox(FragTrap const &target)
     if (this->energy_points <= 0)
         this->energy_points = 0;
     std::cout << this->vaulthunterQuotes[rand() % 25] << std::endl;
+    target.takeDamage(15);
 }
 
-void    NinjaTrap::ninjaShoebox(ScavTrap const &target)
+void    NinjaTrap::ninjaShoebox(ScavTrap &target)
 {
     if (this->energy_points < 25)
     {
@@ -89,9 +91,10 @@ void    NinjaTrap::ninjaShoebox(ScavTrap const &target)
     if (this->energy_points <= 0)
         this->energy_points = 0;
     std::cout << this->vaulthunterQuotes[rand() % 25] << std::endl;
+    target.takeDamage(15);
 }
 
-void    NinjaTrap::ninjaShoebox(NinjaTrap const &target)
+void    NinjaTrap::ninjaShoebox(NinjaTrap &target)
 {
     if (this->energy_points < 25)
     {
@@ -101,8 +104,11 @@ void    NinjaTrap::ninjaShoebox(NinjaTrap const &target)
     this->energy_points -= 25;
     if (this->energy_points <= 0)
         this->energy_points = 0;
+    std::cout << "attacking " << target.name << std::endl;
     std::cout << this->vaulthunterQuotes[rand() % 25] << std::endl;
+    target.takeDamage(15);
 }
+
 
 std::string NinjaTrap::vaulthunterQuotes[25] = {
 	"This time it'll be awesome, I promise!",

@@ -1,7 +1,7 @@
 #include "Enemy.hpp"
 
 
-Enemy::Enemy(int hp, const std::string &type)
+Enemy::Enemy(int hp, std::string const & type)
 {
     this->hp = hp;
     this->type = type;
@@ -21,8 +21,7 @@ Enemy::Enemy(const Enemy &a)
 }
 Enemy &Enemy::operator=(const Enemy &a)
 {
-    *this = a;
-    return *this;
+    return const_cast<Enemy&>(a);
 }
 
 
@@ -49,7 +48,7 @@ void Enemy::takeDamage(int d)
         this->hp = 0;
 }
 
-std::ostream& operator<< (std::ostream& out, const Enemy &_Character)
+std::ostream& operator<< (std::ostream& out, Enemy const &_Character)
 {
     std::cout << "type is " << _Character.getType() << "and hp is "  << _Character.getHP() << std::endl;
     return out;

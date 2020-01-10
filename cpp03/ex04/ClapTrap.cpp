@@ -51,7 +51,7 @@ int ranged_attack_damage, int armor_damage_reduction)
     this->max_hit_points = max_hit_points;
     this->energy_points = energy_points;
     this->max_energy_points = max_energy_points;
-    this->level = 1;
+    this->level = level;
     this->name = name;
     this->melee_attack_damage = melee_attack_damage;
     this->ranged_attack_damage = ranged_attack_damage;

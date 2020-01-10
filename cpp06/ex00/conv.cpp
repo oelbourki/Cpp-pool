@@ -55,7 +55,7 @@ conversion::operator double()
     double c = 0.0;
     try
     {
-        c = std::stof(this->_number);
+        c = std::stod(this->_number);
     }
     catch(const std::exception& e)
     {
@@ -84,6 +84,8 @@ int main(int argc,char **argv)
     }
     else if (argc == 2)
     {
+      //  std::string arg = argv[1];
+       // if (arg.length() == 1 && )
         std::cout << std::fixed << std::setprecision(1);
         conversion conv(argv[1]);
         std::cout << "char: ";
