@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   AssaultTerminator.cpp                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oel-bour <oel-bour@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/22 17:24:54 by oel-bour          #+#    #+#             */
+/*   Updated: 2020/02/22 17:24:54 by oel-bour         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "AssaultTerminator.hpp"
 
 
@@ -8,7 +20,7 @@ AssaultTerminator::AssaultTerminator()
 
 AssaultTerminator::~AssaultTerminator()
 {
-    std::cout << "I\'ll be back ..." << std::endl;
+    std::cout << "I\\'ll be back ..." << std::endl;
 }
 
 ISpaceMarine *AssaultTerminator::clone() const

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oel-bour <oel-bour@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/22 17:23:04 by oel-bour          #+#    #+#             */
+/*   Updated: 2020/02/22 17:23:05 by oel-bour         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "FragTrap.hpp"
 
 
@@ -66,19 +78,19 @@ void    FragTrap::beRepaired(unsigned int amount)
 }
 
 std::string FragTrap::vaulthunterQuotes[25] = {
-	"This time it'll be awesome, I promise!",
+	"This time it\'ll be awesome, I promise!",
 	"Hey everybody, check out my package!",
 	"Place your bets!",
 	"Defragmenting!",
 	"Recompiling my combat code!",
 	"Running the sequencer!",
-	"It's happening... it's happening!",
-	"It's about to get magical!",
-	"I'm pulling tricks outta my hat!",
-	"You can't just program this level of excitement!",
+	"It\'s happening... it\'s happening!",
+	"It\'s about to get magical!",
+	"I\'m pulling tricks outta my hat!",
+	"You can\'t just program this level of excitement!",
 	"What will he do next?",
 	"Things are about to get awesome!",
-	"Let's get this party started!",
+	"Let\'s get this party started!",
 	"Glitchy weirdness is term of endearment, right?",
 	"Push this button, flip this dongle, voila! Help me!",
 	"square the I, carry the 1... YES!",
@@ -86,7 +98,7 @@ std::string FragTrap::vaulthunterQuotes[25] = {
 	"Look out everybody, things are about to get awesome!",
 	"I have an IDEA!",
 	"Round and around and around she goes!",
-	"It's like a box of chocolates...",
+	"It\'s like a box of chocolates...",
 	"Step right up to the sequence of Trapping!",
 	"Hey everybody, check out my package!",
 	"Loading combat packages!",

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Victim.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oel-bour <oel-bour@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/22 17:24:10 by oel-bour          #+#    #+#             */
+/*   Updated: 2020/02/22 17:24:11 by oel-bour         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Victim.hpp"
 
 
@@ -27,7 +39,7 @@ std::string     Victim::get_name()
 
 std::ostream& operator<< (std::ostream& out, Victim& _Victim)
 {
-    out <<  "I'm " << _Victim.get_name() << " and I like otters !\n";
+    out <<  "I\'m " << _Victim.get_name() << " and I like otters !\n";
     return (out);
 }
 

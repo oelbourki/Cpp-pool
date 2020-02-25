@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oel-bour <oel-bour@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/22 17:23:19 by oel-bour          #+#    #+#             */
+/*   Updated: 2020/02/22 17:23:20 by oel-bour         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ScavTrap.hpp"
 
 
@@ -69,9 +81,9 @@ void    ScavTrap::beRepaired(unsigned int amount)
 std::string ScavTrap::challenges[5] = {
 	"Hello, newcomer! Find me a lemon, and this door shall be yours.",
 	"Is the cake a lie?",
-	"Tell me a joke, and maybe I'll consider opening. Wait, that's a great joke!",
-	"I'm SC4V-TP. I won't let you go through, unless you solve my riddle.",
-	"Fetch me a mojito, and I'll call quits on this one."
+	"Tell me a joke, and maybe I\'ll consider opening. Wait, that\'s a great joke!",
+	"I\'m SC4V-TP. I won\'t let you go through, unless you solve my riddle.",
+	"Fetch me a mojito, and I\'ll call quits on this one."
 };
 void    ScavTrap::challengeNewcomer(std::string const & target)
 {
