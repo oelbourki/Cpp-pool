@@ -1,4 +1,4 @@
-# C-42
+# Cpp pool 1337(42)
 cpp pool
 
 cpp03 ex04 clap trap constructor and super trap constructor not mentioned message
