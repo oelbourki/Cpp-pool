@@ -1,8 +1,9 @@
 NAME = cpp01
 CC = clang++
-FLAGS = -Wall -Wextra -Werror
-SRC = contact.cpp phone_book.cpp
-OBJ = contact.o phone_book.o
+# FLAGS = -Wall -Wextra -Werror
+FLAGS = 
+SRC = Contact.cpp phone_book.cpp
+OBJ = Contact.o phone_book.o
 all: $(NAME)
 
 $(NAME): $(OBJ)

@@ -1,4 +1,4 @@
-NAME = cpp00
+NAME = megaphone
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 SRC = megaphone.cpp
