@@ -78,12 +78,12 @@ void Contact::print_info()
 	std::cout << "nickname: " << std::setw(25) <<  this->nickname << std::endl;
 	std::cout << "login: " << std::setw(25) <<  this->login << std::endl;
 	std::cout << "postal address: " << std::setw(25) <<  this->postal_address << std::endl;
-	std::cout << "email address: " << std::setw(25) <<  this->em << std::endl;
-	std::cout << "phone number: " << std::setw(25) <<  this->first_name << std::endl;
-	std::cout << "birthday date: " << std::setw(25) <<  this->first_name << std::endl;
-	std::cout << "favorite meal: " << std::setw(25) <<  this->first_name << std::endl;
-	std::cout << "underwear color: " << std::setw(25) <<  this->first_name << std::endl;
-	std::cout << "darkest secret: " << std::setw(25) <<  this->first_name << std::endl;
+	std::cout << "email address: " << std::setw(25) <<  this->email_address << std::endl;
+	std::cout << "phone number: " << std::setw(25) <<  this->phone_number << std::endl;
+	std::cout << "birthday date: " << std::setw(25) <<  this->birthday_date << std::endl;
+	std::cout << "favorite meal: " << std::setw(25) <<  this->favorite_meal << std::endl;
+	std::cout << "underwear color: " << std::setw(25) <<  this->underwear_color << std::endl;
+	std::cout << "darkest secret: " << std::setw(25) <<  this->darkest_secret << std::endl;
 
 }
 
@@ -114,13 +114,6 @@ int main()
 			std::cout << "index>>> " <<index << std::endl;
 			c[index] = Contact(user_info,index);
 			index++;
-			// i= 0;
-			// while (i < 11)
-			// {
-			// 	std::cout << user_info[i] << std::endl;
-			// 	i++;
-			// }
-			
 		}
 		if (command == "SEARCH")
 		{
@@ -129,7 +122,6 @@ int main()
 			std::cout << std::setw(10) <<  "first name" << '|';
 			std::cout << std::setw(10) <<  "last name" << '|';
 			std::cout << std::setw(10) <<  "nickname" << std::endl;
-			// c[0].print_fields();
 			int i = 0;
 			while (i < 4)
 			{
@@ -144,23 +136,9 @@ int main()
 				std::cout << "index does not make sense " << std::endl;
 				return 1;
 			}
-
+			c[id].print_info();
+			std::cout << "äfter" << std::endl;
 		}
-		// if (i > 8)
-		// 	std::cout << "only 8" << std::endl;
-		// else if (command == "ADD" && i < 8)
-		// 	get_contact(&user[i++]);
-		// else if (command == "SEARCH")
-		// {
-		// 	do_search(i, user);
-		// 	std::cin >> index;
-		// 	if (!(index >= 0 && index < 9))
-		// 		std::cout << "index not available" << std::endl;
-		// 	else if (!(index >= 0 && index < i) && (index >= 0 && index < 9))
-		// 		std::cout << "no contact available at that index" << std::endl;
-		// 	else
-		// 		user[index].print_table();
-		// }
 		if (command == "EXIT")
 			state = 0;
 	}
