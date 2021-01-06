@@ -12,20 +12,22 @@
 
 #include "ZombieHorde.hpp"
 
-void    ZombieHorde::setZombieType(std::string type)
-{
-    this->type = type;
-}
+// void    ZombieHorde::setZombieType(std::string type)
+// {
+//     this->type = type;
+// }
 
-ZombieHorde::ZombieHorde(int N)
+ZombieHorde::ZombieHorde(size_t N)
 {
+    this->type = "Moar";
     this->N = N;
-    this->user = new Zombie[N];
-    int i = 0;
+    this->horde = new Zombie[N];
+    size_t i = 0;
     Zombie u;
     while (i < N)
     {
-        this->user[i].set_Zombie(this->names[rand() % 20], this->type);
+        this->horde[i].set_Zombie(this->names[rand() % 20], this->type);
+        this->horde[i].announce();
         i++;
     }
 }
@@ -36,32 +38,32 @@ ZombieHorde::ZombieHorde()
 }
 ZombieHorde::~ZombieHorde()
 {
-    delete [] this->user;
+    delete [] this->horde;
 }
 
 
-void    ZombieHorde::create(int N)
-{
-    int i = 0;
-    Zombie u;
-    this->user = new Zombie[N];
-    while (i < N)
-    {
-        u = this->user[i];
-        u.set_Zombie(this->names[rand() % 20], this->type);
-        i++;
-    }
-}
+// void    ZombieHorde::create(size_t N)
+// {
+//     int i = 0;
+//     Zombie u;
+//     this->user = new Zombie[N];
+//     while (i < N)
+//     {
+//         u = this->user[i];
+//         u.set_Zombie(this->names[rand() % 20], this->type);
+//         i++;
+//     }
+// }
 
-void    ZombieHorde::announce()
-{
-    int i = 0;
-    while (i < N)
-    {
-        this->user[i].announce();
-        i++;
-    }
-}
+// void    ZombieHorde::announce()
+// {
+//     int i = 0;
+//     while (i < N)
+//     {
+//         this->user[i].announce();
+//         i++;
+//     }
+// }
 
 
 const std::string ZombieHorde::names[20] = {

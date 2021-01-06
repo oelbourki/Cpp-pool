@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <iostream>
+#include <sstream>
 #include "Zombie.hpp"
 #include "ZombieHorde.hpp"
 
@@ -19,15 +20,19 @@
 int     main()
 {
     std::string type;
+    std::string N_str;
     int N;
     std::cout << "creating your ZombieHorde" << std::endl;
     std::cout << "enter the Number" << std::endl;
-    std::cin >> N;
-    std::cout << "enter the type" << std::endl;
-    std::cin >> type;
+    //check if number
+    std::getline(std::cin,N_str);
+    std::stringstream conv(N_str);
+    conv >> N;
+    // std::cout << "enter the type" << std::endl;
+    // std::getline(std::cin,type);
     ZombieHorde Horde(N);
-    Horde.setZombieType(type);
-    Horde.announce();
+    // Horde.setZombieType(type);
+    // Horde.announce();
     std::cout << "to war" << std::endl;
     return (0);
 }

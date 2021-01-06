@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pony.hpp"
+#include "Pony.hpp"
 
 void ponyOnTheHeap()
 {
@@ -19,6 +19,7 @@ void ponyOnTheHeap()
     apple = new Pony;
     apple->set("MAGGY", "red", "Heap", 100,99);
     apple->print_song();
+    //apple->~Pony();// check if that right
     delete apple;
 }
 
@@ -26,13 +27,14 @@ void ponyOnTheStack()
 {
     Pony apple("CLARA", "red", "Stack", 100,99);
     apple.print_song();
+    //apple.~Pony();
 }
 
 int main()
 {
-    std::cout << "THE Heap clane" << std::endl;
+    std::cout << "THE Heap tribe" << std::endl;
     ponyOnTheHeap();
-    std::cout << "THE Stack clane" << std::endl;
+    std::cout << "THE Stack tribe" << std::endl;
     ponyOnTheStack();
     return (0);
 }

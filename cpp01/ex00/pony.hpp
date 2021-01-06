@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef PONY_HPP
+#define PONY_HPP
+
 #include <iostream>
 
 class Pony
@@ -17,13 +20,15 @@ class Pony
     private:
         std::string color;
         std::string name;
-        std::string clane;
+        std::string tribe;
         int height;
         int weight;
     public:
-        Pony(std::string color, std::string name, std::string clane, int height, int weight);
-        void    set(std::string color, std::string name, std::string clane, int height, int weight);
+        Pony(std::string color, std::string name, std::string tribe, int height, int weight);
+        void    set(std::string color, std::string name, std::string tribe, int height, int weight);
         Pony();
        ~Pony();
         void    print_song();
 };
+
+#endif

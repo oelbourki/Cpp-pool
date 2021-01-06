@@ -9,7 +9,7 @@
 /*   Updated: 2020/02/22 17:20:12 by oel-bour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+// push from laptop
 #include <iostream>
 #include <sstream>
 #include <iomanip>
@@ -111,7 +111,6 @@ int main()
 				std::getline(std::cin,user_info[i]);
 				i++;
 			}
-			std::cout << "index>>> " <<index << std::endl;
 			c[index] = Contact(user_info,index);
 			index++;
 		}
@@ -129,15 +128,14 @@ int main()
 					c[i].print_fields();
 				i++;
 			}
-			std::cout << "insert index " << std::endl;
-			std::cin >> id;
+
+			std::stringstream geek(id_str);
 			if (id < 0 || id >= 8)
 			{
 				std::cout << "index does not make sense " << std::endl;
 				return 1;
 			}
 			c[id].print_info();
-			std::cout << "äfter" << std::endl;
 		}
 		if (command == "EXIT")
 			state = 0;

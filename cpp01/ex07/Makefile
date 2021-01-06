@@ -14,5 +14,6 @@ $(OBJ):
 clean:
 	rm -rf $(OBJ)
 fclean: clean
-	rm -rf $(NAME)
+# check *.replace
+	rm -rf $(NAME) *.replace
 re: fclean all

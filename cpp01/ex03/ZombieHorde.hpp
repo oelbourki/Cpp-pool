@@ -17,16 +17,16 @@
 class ZombieHorde
 {
     private:
-        int N;
-        Zombie *user;
+        size_t N;
+        Zombie *horde;
         static const std::string names[20];
         std::string type;
     public:
-        ZombieHorde(int N);
+        ZombieHorde(size_t N);
         ZombieHorde();
         ~ZombieHorde();
-        void    create(int N);
-        void randomChump(Zombie *user);
-        void    announce();
+        // void    create(size_t N);
+        // void randomChump(Zombie *user);
+        // void    announce();
         void    setZombieType(std::string type);
 };

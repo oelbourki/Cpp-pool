@@ -13,7 +13,17 @@
 #include "HumanA.hpp"
 #include "HumanB.hpp"
 
+/*
+It's only preferable to store references as data members
+if they're being assigned at construction
+and there is truly no reason to ever change them.
+Since references cannot be reassigned, they are very limited.
 
+In general, I typically store as pointers
+(or some form of templated smart pointer).
+This is much more flexible - both for testing
+(as you mentioned) but also just in terms of normal usage.
+*/
 int main()
 {
 	{   
