@@ -12,22 +12,6 @@
 
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
-#include<string.h>
-#include <iostream>
-// class Contact
-// {
-//     private:
-//         std::string table[11];
-//         static int numofuser;
-//     public:
-//         Contact(std::string *table);
-//         void    print_table();
-//         void    set(std::string *table);
-//         Contact();
-//         ~Contact();
-//         void    search(int j);
-// };
-
 
 #include<string.h>
 #include <iostream>
@@ -49,8 +33,6 @@ class Contact
 		std::string underwear_color;
 		std::string darkest_secret;
 	public:
-		static size_t index;
-		size_t get_index();
 		bool is_empty(){
 			return this->empty;
 		}

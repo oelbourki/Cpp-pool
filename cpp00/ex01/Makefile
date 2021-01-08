@@ -1,6 +1,6 @@
 NAME = cpp01
 CC = clang++
-# FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror
 FLAGS = 
 SRC = Contact.cpp phone_book.cpp
 OBJ = Contact.o phone_book.o

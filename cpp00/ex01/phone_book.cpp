@@ -9,7 +9,7 @@
 /*   Updated: 2020/02/22 17:20:12 by oel-bour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-// push from laptop
+
 #include <iostream>
 #include <sstream>
 #include <iomanip>
@@ -29,48 +29,6 @@ const std::string info[11] = {
 		"darkest secret"};
 std::string user_info[11];
 Contact c[8];
-// void	get_contact(contact *user)
-// {
-// 	int i;	
-// 	i = 0;
-// 	std::string table[11];
-// 	std::cout << "enter first name" << std::endl;
-// 	std::getline( std::cin, table[i++]);
-// 	std::cout << "enter last name" << std::endl;
-// 	std::getline( std::cin, table[i++]);
-// 	std::cout << "enter nickname" << std::endl;
-// 	std::getline( std::cin, table[i++]);
-// 	std::cout << "enter login" << std::endl;
-// 	std::getline( std::cin, table[i++]);
-// 	std::cout << "enter postal address" << std::endl;
-// 	std::getline( std::cin, table[i++]);
-// 	std::cout << "enter email address" << std::endl;
-// 	std::getline( std::cin, table[i++]);
-// 	std::cout << "enter phone number" << std::endl;
-// 	std::getline( std::cin, table[i++]);
-// 	std::cout << "enter birthday date" << std::endl;
-// 	std::getline( std::cin, table[i++]);
-// 	std::cout << "enter favorite meal" << std::endl;
-// 	std::getline( std::cin, table[i++]);
-// 	std::cout << "enter underwear color" << std::endl;
-// 	std::getline( std::cin, table[i++]);
-// 	std::cout << "enter darkest secret." << std::endl;
-// 	std::getline( std::cin, table[i++]);
-// 	user->set(table);
-// }
-
-// void	do_search(int i, contact *user)
-// {
-// 	int j(0);
-
-// 	while (j < i)
-// 	{
-// 		user[j].search(j);
-// 		std::cout << "\n";
-// 		j++;
-// 	}
-	
-// }
 void Contact::print_info()
 {
 	std::cout << "first name: " << std::setw(25) <<  this->first_name << std::endl;
@@ -87,22 +45,29 @@ void Contact::print_info()
 
 }
 
+std::string &trim(std::string &s,const std::string &delimiters=" \f\n\r\t\v")
+{
+	s.erase(s.find_last_not_of(delimiters) + 1);
+	s.erase(0,s.find_first_not_of(delimiters));
+    return s;
+}
+
 int main()
 {
-	int state = 1;
-	int i(0);
 	int index(0);
 	std::string command;
-	std::cout << "the awesome phone terimnal" << std::endl;
-	while (state)
+	std::cout << "My Awesome PhoneBook" << std::endl;
+	std::cout << "prompt>>";
+	while (std::getline(std::cin, command))
 	{
-		std::cout << "prompt>>";
-		std::getline(std::cin,command);
+
+		trim(command);
 		if (command == "ADD")
 		{
 			if (index >= 8)
 			{
 				std::cout << "you are limited to 8 contact only!!!!!"<< std::endl;
+				continue;
 			}
 			int i = 0;
 			while (i < 11)
@@ -128,8 +93,11 @@ int main()
 					c[i].print_fields();
 				i++;
 			}
-
-			std::stringstream geek(id_str);
+			std::cout << "insert index: ";
+			std::string id_str;
+			getline(std::cin,id_str);
+			std::stringstream num(id_str);
+			num >> id;
 			if (id < 0 || id >= 8)
 			{
 				std::cout << "index does not make sense " << std::endl;
@@ -138,7 +106,8 @@ int main()
 			c[id].print_info();
 		}
 		if (command == "EXIT")
-			state = 0;
+			break;
+		std::cout << "prompt>>";
 	}
 	return (0);
 }
